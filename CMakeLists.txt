@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.5)
+project(TwistedHesse LANGUAGES C)
+find_package(OpenSSL REQUIRED)
+add_executable(TwistedHesse twistedhesse.c twistedhesse.h main.c)
+target_link_libraries(TwistedHesse OpenSSL::Crypto)
